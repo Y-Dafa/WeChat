@@ -62,7 +62,7 @@ exports.savePoster = async (ctx, next) => {
     const timestamp = Date.now()
     const type = posterData.type.split('/')[1]
     const poster = timestamp + '.' + type
-    const newPath = resolve(__dirname, '../../../', 'public/upload' + poster)
+    const newPath = resolve(__dirname, '../../../../../', 'public/upload' + poster)
 
     await writeFileAsync(newPath, data)
 
